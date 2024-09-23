@@ -1,2 +1,2 @@
 # sha_import_order_lines
-Import Sale, Purchase Order Line
+Import Sale & Purchase Order Line from XLSX File

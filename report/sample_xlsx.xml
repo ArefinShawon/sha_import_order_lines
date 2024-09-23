@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sample_pol_xlsx" model="ir.actions.report">
+        <field name="name">Purchase Order Line Sample File</field>
+        <field name="model">import.pol.wiz</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">download_sample_pol_xlsx</field>
+        <field name="report_file">download_sample_pol_xlsx</field>
+    </record>
+
+    <record id="sample_sol_xlsx" model="ir.actions.report">
+        <field name="name">Sale Order Line Sample File</field>
+        <field name="model">import.sol.wiz</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">download_sample_sol_xlsx</field>
+        <field name="report_file">download_sample_sol_xlsx</field>
+    </record>
+</odoo>

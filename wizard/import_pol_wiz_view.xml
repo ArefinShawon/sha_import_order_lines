@@ -1,0 +1,37 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="import_pol_wiz_form">
+            <field name="name">import.pol.wiz.form</field>
+            <field name="model">import.pol.wiz</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                            <field name="po_id" readonly="1" options="{'no_open': True}"
+                                   attrs="{'invisible': [('message_type', '=', 'success')]}"/>
+                            <field name="vendor_name" options="{'no_open': True}"
+                                   attrs="{'invisible': [('message_type', '=', 'success')]}"/>
+                            <field name="message_type" invisible="1"/>
+                            <field name="message" attrs="{'invisible': [('message_type', '=', 'import')]}"
+                                   readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="import_file" attrs="{'invisible': [('message_type', '=', 'success')]}"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button type="object" name="import_xlsx_file" string="Import" class="oe_highlight"
+                                icon="fa-upload" attrs="{'invisible': [('message_type', '=', 'success')]}"/>
+                        <button special="cancel" string="Cancel" class="btn-danger"
+                                attrs="{'invisible': [('message_type', '=', 'success')]}" icon="fa-close"/>
+                        <button special="cancel" string="Close" attrs="{'invisible': [('message_type', '=', 'import')]}"
+                                icon="fa-close" class="btn-danger"/>
+                        <button type="object" name="download_sample_file" string="Download Sample XLSX" class="btn-info"
+                                style="float: right;"
+                                icon="fa-download" attrs="{'invisible': [('message_type', '=', 'success')]}"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

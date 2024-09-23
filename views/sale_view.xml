@@ -1,13 +1,13 @@
 <odoo>
     <data>
-        <record model="ir.ui.view" id="sha_po_line_import_form">
-            <field name="name">purchase.order.form</field>
-            <field name="model">purchase.order</field>
-            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <record model="ir.ui.view" id="sha_so_line_import_form">
+            <field name="name">sale.order.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//notebook" position="before">
                     <button type="object" name="import_lines" string="Import Products From XLSX" class="btn-info"
-                            attrs="{'invisible': [('state', 'not in', ['draft','sent'])]}"/>
+                            attrs="{'invisible': [('state', 'in', ['sale', 'done', 'cancel'])]}"/>
 <!--                            groups="sha_import_order_lines.group_purchase_import_line_user"/>-->
                 </xpath>
             </field>
